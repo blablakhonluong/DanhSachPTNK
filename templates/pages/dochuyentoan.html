@@ -1,0 +1,51 @@
+{% extends 'layout.html' %} 
+
+{% block title %}
+<title>Danh sách các bạn đỗ Chuyên Toán</title>
+
+{% endblock %}
+
+
+
+{% block content %}
+<h2 style="text-align:center;">Danh sách các bạn đỗ Chuyên Toán</h2><br><br>
+
+
+    <table class="table table-dark">
+       <tr>
+        <th>Số báo danh</th>
+        <th>Họ </th>
+        <th>Tên</th>
+        <th>Ngày sinh </th>
+        <th>Giới tính</th>
+        <th>Toán KC</th>
+        <th>Văn KC</th>
+        <th>Anh KC</th>
+        <th>Toán Chuyên</th>
+        <th>Tổng điểm</th>
+        
+    </tr> 
+    {% for row in data%}
+    <tr>
+        <td>{{row.1}}</td>
+        <td>{{row.2}}</td>
+        <td>{{row.3}}</td>
+        <td>{{row.5}}</td>
+        <td>{{row.4}}</td>
+        <td>{{row.7}}</td>
+        <td>{{row.9}}</td>
+        <td>{{row.8}}</td>
+        <td>{{row.10}}</td>
+        <td>{{row.17}}</td>
+    </tr>
+    {% endfor %}
+
+
+
+    </table>
+
+    
+
+
+{% endblock %}
+
